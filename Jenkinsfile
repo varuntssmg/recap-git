@@ -1,4 +1,3 @@
-
 pipeline {
     agent {
         label 'slave'
@@ -32,6 +31,11 @@ pipeline {
         stage('Memory Usage') {
             steps {
                 sh 'free -m'
+            }
+        }
+         stage('date') {
+            steps {
+                sh 'date'
             }
         }
     }
